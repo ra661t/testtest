@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>dept 상세보기화면</h1>
+<table border="1">
+<tr><th>부서번호</th><th>부서명</th><th>지역</th></tr>
+<tr>
+
+	<td><a th:href="@{deptRetrive(deptno=${dept.deptno}, dname=${dept.dname}, loc=${dept.loc})}"
+	th:text="${dept.deptno}"></a></td>
+	<td th:text="${dept.dname}">
+	<td th:text="${dept.loc}">
+</tr>
+</table>
+</form>
+<center><a th:href="@{list}" th:text="리스트로가기"></a></center>
+</body>
+</html>
